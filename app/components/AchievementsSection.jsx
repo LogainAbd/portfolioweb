@@ -63,7 +63,7 @@ const Achievement = ({ value, prefix, postfix, metric }) => {
 const AchievementsSection = () => {
   return (
     <div className='py-8 px-4'>
-      <div className='border-[#33353F] border rounded-md py-8 px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-around gap-8'>
+      <div className='border-[#33353F] border rounded-md py-8 px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-around gap-8 achievements-container'>
         {achievementsList.map((achievement, index) => (
           <Achievement
             key={index}
@@ -71,6 +71,7 @@ const AchievementsSection = () => {
             prefix={achievement.prefix}
             postfix={achievement.postfix}
             metric={achievement.metric}
+            className="achievement-item"
           />
         ))}
       </div>
